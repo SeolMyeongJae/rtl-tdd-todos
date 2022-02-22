@@ -38,10 +38,16 @@ const TodoApp = () => {
       )
     }, [todos]
   )
+  
+  const onRemove = useCallback(
+    id => {
+      setTodos(todos.filter((todo) => todo.id !== id));
+    }
+  )
 
   return <>
     <TodoForm data-testid="helloworld" onInsert={onInsert}/>
-    <TodoList todos={todos} onToggle={onToggle} />
+    <TodoList todos={todos} onToggle={onToggle} onRemove={onRemove}/>
   </>
 };
 
