@@ -5,7 +5,7 @@ import TodoApp from "./TodoApp";
 function App() {
   return (
     <div className="App">
-      <div>jenkins test222222222222</div>
+      <h2>CI CD Jenkins with github auto deploy</h2>
       <TodoApp />
     </div>
   );
